@@ -1,8 +1,20 @@
+name: 'shlokas'
+
+
 services:
   balancer:
     build:
       context: .
-    environment:
-      - ENV=dev
+    env_file:
+      - .env
     ports:
       - 80:80
+    networks:
+      - shlokas
+    volumes:
+      - .logs:/var/log/nginx
+
+
+networks:
+  shlokas:
+    name: shlokas

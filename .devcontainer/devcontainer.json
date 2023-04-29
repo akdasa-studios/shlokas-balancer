@@ -1,0 +1,12 @@
+{
+  "name": "Shlokas Balancer",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "./docker-compose.dev.yml"
+  ],
+  "service": "balancer",
+  "shutdownAction": "stopCompose",
+  "overrideCommand": true,
+  "onCreateCommand": ".devcontainer/on_create.sh",
+  "workspaceFolder": "/app/shlokas-balancer"
+}
