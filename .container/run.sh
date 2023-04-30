@@ -6,6 +6,7 @@ if [[ -z "${BALANCER_ENV}" ]]; then
 fi
 
 echo "Starting nginx for ${BALANCER_ENV}"
+cd /app/shlokas-balancer
 
 # render template
 envsubst "\$BALANCER_ENV"  < ./config/nginx.conf.template > ./config/nginx.conf

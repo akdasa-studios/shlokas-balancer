@@ -6,7 +6,7 @@
     {
       "label": "Run",
       "type": "shell",
-      "command": "./run.sh",
+      "command": ".container/run.sh",
       "icon": {
         "id": "server",
       },

@@ -5,7 +5,7 @@ ARG BALANCER_VERSION=dev
 # Copy the nginx configuration files
 WORKDIR /app/shlokas-balancer
 COPY . .
-RUN echo "VERSION=${BALANCER_VERSION}" > .meta
+RUN echo "VERSION=${BALANCER_VERSION}" > .container/meta
 
 # Run nginx
-CMD ["/app/shlokas-balancer/run.sh"]
+CMD ["/app/shlokas-balancer/.container/run.sh"]
