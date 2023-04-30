@@ -1,12 +1,11 @@
-name: Publish
+name: Build
 on:
-  release:
-    types: [released]
+  push:
 
 env:
   REGISTRY:   ghcr.io
   IMAGE_NAME: ghcr.io/${{ github.repository }}
-  IMAGE_TAG:  ${{ github.event.release.tag_name }}
+  IMAGE_TAG:  dev-${{github.run_number}}-${{ github.sha }}
 
 
 jobs:
@@ -34,6 +33,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }},${{ env.IMAGE_NAME }}:latest
+          tags: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           build-args: |
             BALANCER_VERSION=${{ env.IMAGE_TAG }}
