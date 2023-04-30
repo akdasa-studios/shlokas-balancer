@@ -1,4 +1,5 @@
 FROM nginx:1.23.4-alpine
+LABEL org.opencontainers.image.description "Simple load balancer for the Shlokas project."
 ARG BALANCER_VERSION=dev
 
 # Copy the nginx configuration files
