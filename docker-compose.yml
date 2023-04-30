@@ -9,10 +9,12 @@ services:
       - .env
     ports:
       - 80:80
+      - 443:443
     networks:
       - shlokas
     volumes:
-      - .logs:/var/log/nginx
+      - .logs/balancer/nginx:/var/log/nginx
+      - .secrets/balancer/certs:/app/shlokas-balancer/certs
 
 
 networks:

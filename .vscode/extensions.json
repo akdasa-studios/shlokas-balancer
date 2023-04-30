@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "william-voyek.vscode-nginx",
-    "jakebathman.nginx-log-highlighter"
+    "jakebathman.nginx-log-highlighter",
+    "raynigon.nginx-formatter"
   ]
 }
