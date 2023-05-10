@@ -23,18 +23,18 @@ Nginx Load Balancer for Shlokas. This is a simple load balancer for the Shlokas 
 
 ## Development
 
-`run.sh` will start the server in development mode. This will start the server in port `80` and will redirect requests to the backend servers.
+`.container/run.sh` will start the server in development mode. This will start the server in port `80` and will redirect requests to the backend servers.
 
 ### Endable HTTPS for local development
 
 1. Add `127.0.0.1 shlokas.dev` to `/etc/hosts`:
 2. Add `rootCA.rem` as trusted root certificate.
 3. Copy `certs/server.csr` and `certs/server.key` to `.secrets/balancer/certs`
-4. Run `BALANCER_ENV=prod run.sh`
+4. Run `BALANCER_ENV=prod .container/run.sh`
 
 
 ## Production
 
 1. Copy `server.csr` and `server.key` to `.secrets/balancer/certs`
-2. `BALANCER_ENV=prod run.sh` will start the server in production mode.
+2. `BALANCER_ENV=prod .container/run.sh` will start the server in production mode.
 

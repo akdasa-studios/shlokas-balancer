@@ -8,5 +8,14 @@
   "shutdownAction": "stopCompose",
   "overrideCommand": true,
   "onCreateCommand": ".devcontainer/on_create.sh",
-  "workspaceFolder": "/app/shlokas-balancer"
+  "workspaceFolder": "/app/shlokas-balancer",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "william-voyek.vscode-nginx",
+        "jakebathman.nginx-log-highlighter",
+        "raynigon.nginx-formatter"
+      ]
+    }
+  }
 }

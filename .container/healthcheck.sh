@@ -1,0 +1,1 @@
+curl -f http://localhost/balancer/_meta
