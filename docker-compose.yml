@@ -13,8 +13,8 @@ services:
     networks:
       - shlokas
     volumes:
-      - .logs/balancer/nginx:/var/log/nginx
-      - .secrets/balancer/certs:/app/shlokas-balancer/certs
+      - .logs/:/var/log/nginx
+      - .data:/app/shlokas-balancer/.data
 
 
 networks:
