@@ -34,6 +34,6 @@ Nginx Load Balancer for Shlokas. This is a simple load balancer for the Shlokas 
 
 ## Production
 
-1. Copy `server.csr` and `server.key` to `.secrets/balancer/certs`
+1. Copy `server.csr` and `server.key` to `.data`
 2. `BALANCER_ENV=prod .container/run.sh` will start the server in production mode.
 
